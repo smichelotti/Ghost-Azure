@@ -57,6 +57,7 @@ config = {
     production: {
         url: websiteUrl,
         forceAdminSSL: true,
+        urlSSL: process.env.adminUrl,
 
         // Visit http://support.ghost.org/mail for instructions
         mail: {
