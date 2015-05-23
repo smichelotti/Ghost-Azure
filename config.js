@@ -56,6 +56,7 @@ config = {
     // Configure your URL and mail settings here
     production: {
         url: websiteUrl,
+        forceAdminSSL: true,
 
         // Visit http://support.ghost.org/mail for instructions
         mail: {
