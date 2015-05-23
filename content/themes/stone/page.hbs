@@ -22,7 +22,7 @@
             
             <header class="post-header">
                 <h1 class="post-title">{{title}}</h1>
-                <section class="post-meta">
+                <section class="post-meta invisible">
                     <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time> {{tags prefix=" on "}}
                 </section>
             </header>
@@ -34,6 +34,7 @@
             <footer class="post-footer {{#if image}}has-avatar{{/if}}">
 
             {{! Everything inside the #author tags pulls data from the author }}
+{{!--
             {{#author}}
                 <div class="v-card">
                     {{#if image}}
@@ -59,7 +60,7 @@
 
                 {{! The big featured header }}
                 {{> "comments"}}
-
+--}
             </footer>
 
         </div> 
