@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {{! Document Settings }}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    {{! Page Meta }}
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
+
+    {{! Styles'n'Scripts }}
+    <link rel="stylesheet" type="text/css" href="{{asset "css/polyfill.object-fit.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/uikit.css"}}" />
+    <link rel="stylesheet" href="{{asset "css/monokai_sublime.css"}}">
+    <link rel="stylesheet" type="text/css" href="{{asset "css/stone.css"}}" />
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700|Raleway:400,700' rel='stylesheet' type='text/css'>
+
+    {{! Ghost outputs important style and meta data with this tag }}
+    {{ghost_head}}
+</head>
+<body class="{{body_class}}">
+
+    {{! Everything else gets inserted here }}
+    {{{body}}}
+
+    {{! Ghost outputs important scripts and data with this tag }}
+    {{ghost_foot}}
+
+    {{! The main JavaScript file for Casper }}
+    <script>
+        function aload(a){"use strict";a=a||window.document.querySelectorAll("[data-aload]"),void 0===a.length&&(a=[a]);var b,c=0,d=a.length;for(c;d>c;c+=1)b=a[c],b["LINK"!==b.tagName?"src":"href"]=b.getAttribute("data-aload"),b.removeAttribute("data-aload");return a}
+    </script>
+    <script type="text/javascript" src="{{asset "js/polyfill.object-fit.min.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/uikit.min.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/highlight.min.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
+
+    {{!-- Analytics code --}}
+    {{> "analytics"}}
+</body>
+</html>

@@ -1,0 +1,9 @@
+.ghost-btn {
+  padding: 5px 10px;
+  display: inline-block;
+  vertical-align: top;
+  zoom: 1;
+  /* Fix for IE7 */
+  *display: inline;
+  /* Fix for IE7 */
+}

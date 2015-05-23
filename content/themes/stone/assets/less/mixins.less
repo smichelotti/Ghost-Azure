@@ -1,0 +1,39 @@
+.ghost-btn {
+	padding: 5px 10px;
+	display: inline-block;
+	vertical-align: top;
+	zoom: 1; /* Fix for IE7 */
+	*display: inline; /* Fix for IE7 */
+	border: 1px solid @light;
+	color: @light;
+	font-size: 1.3em;
+
+	&:hover,
+	&:active {
+		background: @light;
+		color: @dark;
+		text-decoration: none;
+	}
+
+	&.block {
+		display: block;
+		margin: 10px 0;
+	}
+
+	&.ghost-btn-negative {
+		border: 1px solid @dark;
+		color: @dark;
+
+		&:hover,
+		&:active {
+			background: @dark;
+			color: @light;
+		}
+	}
+}
+
+.invisible {
+	.opacity( 0 );
+	pointer-events: none;
+	margin: 0!important;
+}

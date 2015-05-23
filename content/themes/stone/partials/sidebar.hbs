@@ -1,0 +1,46 @@
+<div class="action-button" data-action="open-sidebar"><i class="uk-icon-reorder"></i></div>
+
+<div class="mobile-menu">
+    <div class="menu-mobile-options">
+        <span class="close">&times;</span>
+        {{#if @blog.navigation}}
+            {{navigation}}
+        {{else}}
+            <a href="{{@blog.url}}/rss/" class="" >Subscribe</a>
+            <a href="/about/" class="">About</a>
+            <a href="/contact/" class="">Contact</a>
+        {{/if}}
+    </div>
+</div>
+
+<header class="sidebar-header no-post {{#if @blog.cover}}with-cover{{/if}}">
+    {{#if @blog.cover}}
+        <img class="cover-img" data-aload="{{@blog.cover}}" alt="">
+        <div class="overlay"></div>
+    {{/if}}
+
+    <div class="action-button" data-action="close-sidebar"><i class="uk-icon-reorder"></i></div>
+    <div class="action-button" data-action="show-menu"><i class="uk-icon-reorder"></i></div>
+
+    <div class="sidebar-content {{#if @blog.cover}}with-cover{{/if}} {{#unless @blog.cover}}mate{{/unless}}">
+        <div class="inner">
+            {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" /></a>{{/if}}
+            <h1 class="page-title">{{@blog.title}}</h1>
+            <h4 class="page-description">{{@blog.description}}</h4>
+        </div>
+
+        <div class="pages">
+            {{#if @blog.navigation}}
+                {{navigation}}
+            {{else}}
+                <a href="{{@blog.url}}/rss/" class="ghost-btn block" >Subscribe</a>
+                <a href="/about/" class="ghost-btn block">About</a>
+                <a href="/contact/" class="ghost-btn block">Contact</a>
+            {{/if}}
+        </div>
+
+        {{> "badges"}}
+        {{> "social"}}
+
+    </div>
+</header>

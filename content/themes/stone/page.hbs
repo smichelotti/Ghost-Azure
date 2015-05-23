@@ -1,0 +1,73 @@
+{{!< default}}
+
+{{! The comment above "< default" means - insert everything in this file into
+    the {body} of the default.hbs template, which contains our header/footer. }}
+
+{{! Everything inside the #post tags pulls data from the post }}
+{{#post}}
+
+{{! The big featured header }}
+{{> "sidebar"}}
+
+{{! The main content area for the post }}
+<main id="content-single-post" class="content" role="main">
+
+    <article class="{{post_class}}">
+
+        {{#if image}}
+            <img class="featured-image" data-aload="{{image}}" alt="{{ title }}" nopin="nopin" />
+        {{/if}}
+
+        <div class="paper {{#if image}}with-feat-img{{/if}}">
+            
+            <header class="post-header">
+                <h1 class="post-title">{{title}}</h1>
+                <section class="post-meta">
+                    <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time> {{tags prefix=" on "}}
+                </section>
+            </header>
+
+            <section class="post-content">
+                {{content}}
+            </section>
+
+            <footer class="post-footer {{#if image}}has-avatar{{/if}}">
+
+            {{! Everything inside the #author tags pulls data from the author }}
+            {{#author}}
+                <div class="v-card">
+                    {{#if image}}
+                        <figure class="author-image">
+                            <a class="img" href="{{url}}"><img src="{{ image }}" alt=""></a>
+                        </figure>
+                    {{/if}}
+
+                    <section class="author">
+                        <h4>Written by <a href="{{url}}">{{name}}</a></h4>
+
+                        {{#if bio}}
+                            <p>{{bio}}</p>
+                        {{/if}}
+                        
+                        <div class="author-meta">
+                            {{#if location}}<span class="author-location icon-location">Located on {{location}}</span> <br>{{/if}} 
+                            {{#if website}}<span class="author-link icon-link"><a href="{{website}}">{{website}}</a></span>{{/if}}
+                        </div>
+                    </section>
+                </div>
+            {{/author}}
+
+                {{! The big featured header }}
+                {{> "comments"}}
+
+            </footer>
+
+        </div> 
+        {{!-- End Paper --}}
+
+    </article>
+
+</main>
+
+{{/post}}
+
