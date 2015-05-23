@@ -56,8 +56,7 @@ config = {
     // Configure your URL and mail settings here
     production: {
         url: websiteUrl,
-        forceAdminSSL: true,
-        //urlSSL: process.env.adminUrl,
+        forceAdminSSL: false, // causes a redirect-loop on azure, use urlrewrite instead
 
         // Visit http://support.ghost.org/mail for instructions
         mail: {
