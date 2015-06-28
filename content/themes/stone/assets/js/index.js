@@ -15,7 +15,7 @@
     });
 
     // Initialize code highlighting
-    hljs.initHighlightingOnLoad();
+    //hljs.initHighlightingOnLoad();
 
     // Close sidebar
     $( '.action-button' ).on( 'click', function ( e ) {
