@@ -3,7 +3,7 @@ var gulpLoadPlugins = require("gulp-load-plugins");
 var plugins = gulpLoadPlugins();
 
 var paths = {
-    vendorScripts: ['./lib/shCore.js', './lib/shBrushCSharp.js', './lib/shBrushJSharp.js', './lib/shBrushPowerShell.js', './lib/shBrushSql.js', './lib/shBrushVb.js', './lib/shBrushXml.js']    
+    vendorScripts: ['./lib/shCore.js', './lib/shBrushCSharp.js', './lib/shBrushJScript.js', './lib/shBrushPowerShell.js', './lib/shBrushSql.js', './lib/shBrushVb.js', './lib/shBrushXml.js']    
 };
 
 gulp.task('bundlejs', function() {
