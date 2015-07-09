@@ -9,7 +9,12 @@ var paths = {
         './assets/js/js/jquery.fitvids.js',
         './lib/shCore.js', './lib/shBrushCSharp.js', './lib/shBrushJScript.js', './lib/shBrushPowerShell.js', './lib/shBrushSql.js', './lib/shBrushVb.js', './lib/shBrushXml.js',
         './assets/js/index.js'],
-    vendorCss: ['./lib/shThemeDefault.css', './lib/shCore.css']    
+    vendorCss: [
+        './assets/css/css/polyfill.object-fit.css',
+        './assets/css/uikit.css',
+        './assets/css/monokai_sublime.css',
+        './lib/shThemeDefault.css', 
+        './lib/shCore.css']    
 };
 
 gulp.task('bundlejs', function() {
