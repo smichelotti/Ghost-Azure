@@ -3,7 +3,12 @@ var gulpLoadPlugins = require("gulp-load-plugins");
 var plugins = gulpLoadPlugins();
 
 var paths = {
-    vendorScripts: ['./lib/shCore.js', './lib/shBrushCSharp.js', './lib/shBrushJScript.js', './lib/shBrushPowerShell.js', './lib/shBrushSql.js', './lib/shBrushVb.js', './lib/shBrushXml.js'],
+    vendorScripts: [
+        './assets/js/polyfill.object-fit.min.js',
+        './assets/js/uikit.min.js',
+        './assets/js/js/jquery.fitvids.js',
+        './lib/shCore.js', './lib/shBrushCSharp.js', './lib/shBrushJScript.js', './lib/shBrushPowerShell.js', './lib/shBrushSql.js', './lib/shBrushVb.js', './lib/shBrushXml.js',
+        './assets/js/index.js'],
     vendorCss: ['./lib/shThemeDefault.css', './lib/shCore.css']    
 };
 
