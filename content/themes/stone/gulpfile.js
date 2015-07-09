@@ -11,7 +11,7 @@ var paths = {
         './assets/js/index.js'],
     vendorCss: [
         './assets/css/css/polyfill.object-fit.css',
-        './assets/css/uikit.css',
+        //'./assets/css/uikit.css',
         './assets/css/monokai_sublime.css',
         './lib/shThemeDefault.css', 
         './lib/shCore.css']    
