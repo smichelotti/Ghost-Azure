@@ -24,7 +24,7 @@ gulp.task('bundlejs', function() {
     
     //return gulp.src('./lib/*.js')
     return gulp.src(paths.vendorScripts)
-    .pipe(plugins.uglify({}))
+    //.pipe(plugins.uglify({}))
     .pipe(plugins.concat('lib_built.js'))
     //.pipe(gulp.dest('./dist/'));
     .pipe(gulp.dest('./lib/'));
