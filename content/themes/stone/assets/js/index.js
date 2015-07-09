@@ -53,5 +53,7 @@
         $( '.mobile-menu' ).removeClass( 'active visible' );
     })
 
+    // Initialize Syntax Highlighter
+    SyntaxHighlighter.all();
 
 }) ( jQuery );
