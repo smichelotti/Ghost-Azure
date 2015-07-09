@@ -10,9 +10,10 @@ var paths = {
         './lib/shCore.js', './lib/shBrushCSharp.js', './lib/shBrushJScript.js', './lib/shBrushPowerShell.js', './lib/shBrushSql.js', './lib/shBrushVb.js', './lib/shBrushXml.js',
         './assets/js/index.js'],
     vendorCss: [
-        './assets/css/css/polyfill.object-fit.css',
-        //'./assets/css/uikit.css',
+        './assets/css/polyfill.object-fit.css',
+        './assets/css/uikit.css',
         './assets/css/monokai_sublime.css',
+        './assets/css/stone.css',
         './lib/shThemeDefault.css', 
         './lib/shCore.css']    
 };
@@ -39,5 +40,5 @@ gulp.task('bundlecss', function(){
     return gulp.src(paths.vendorCss)
     .pipe(plugins.minifyCss({}))
     .pipe(plugins.concat('lib_built.css'))
-    .pipe(gulp.dest('./lib/'));
+    .pipe(gulp.dest('./assets/css/'));
 });
