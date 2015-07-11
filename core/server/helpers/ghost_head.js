@@ -311,8 +311,8 @@ ghost_head = function (options) {
             }
         }
         head.push('<meta name="generator" content="Ghost ' + safeVersion + '" />');
-        head.push('<link rel="alternate" type="application/rss+xml" title="' +
-            title  + '" href="' + config.urlFor('rss', null, true) + '" />');
+        // head.push('<link rel="alternate" type="application/rss+xml" title="' +
+        //     title  + '" href="' + config.urlFor('rss', null, true) + '" />');
     }).then(function () {
         return api.settings.read({key: 'ghost_head'});
     }).then(function (response) {
